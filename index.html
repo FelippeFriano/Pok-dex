@@ -15,25 +15,23 @@
 <body>
     <main>
         <img class="pokemon-imagem" src="">
-        <h1 class="pokemon-dados">
 
+        <h1 class="pokemon-dados">
             <span class="pokemonNumero"></span>
             <span class="pokemonNome"></span>
             <span class="pokemonTipo"></span>
         </h1>
 
-        <form class="form">
-            <input type="search" class="search" placeholder="Nome ou Id" required>
+        <form class="form" onsubmit="formSearch()">
+            <input type="text" class="search" placeholder="Nome ou Id" >
         </form>
 
         <div class="buttons">
-            <button class="button btn-prev"> </button>
-            <button class="button btn-next"></button>
-
+            <button class="button btn-prev" onclick="btnPrev()"></button>
+            <button class="button btn-next" onclick="btnNext()"></button>
         </div>
 
         <img src="./imagens/pokedex 2.png" alt="pokedex" class="pokedex">
-
 
     </main>
     
