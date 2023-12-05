@@ -2,45 +2,72 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
     font-family: 'Nova Square', sans-serif;
 
 }
 body{
     background: linear-gradient(-45deg, #009dff, #ffffff,  #a1cee9);
-    background-size: 400% 400%;
+    background-size: 200% 200%;
     animation: gradient 15s ease infinite;
     overflow-x: hidden; 
     height: 100%;
 
 }
 
-main {
-    display: inline-block;
-    margin-top: 2%;
-    padding: 15px;
-}
 .pokedex{
-    position: absolute;
-    margin-top: 2vh;
-    left: 60vh;
+    position: relative;
+    left: 35%;
     width: 100%;
-    max-width: 30%;
+    max-width: 100%;
     border-radius: 3%;
-    
-   
-    
+}
+
+.pokedex-img{
+    z-index: -1;
 }
 
 .search{
     position: absolute;
-    top: 59vh;
-    left: 58vh;
-    width: 13%;
+    top: 69vh;
+    left: 5vh;
+    width: 25%;
     height: 9%;
-    max-width: 13%;
+    max-width: 100%;
+    max-height: 3.5%;
     background-color: transparent;
     border-color: transparent;
 }
+
+.buttons{
+    position: absolute;
+    top: 80vh;
+    height: 5vh;
+    left: 5vh;
+}
+
+.button.btn-next{
+    position: relative;
+    height: 86%;
+    bottom: 28.3%;
+    width: 3em;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+}
+
+.button.btn-prev{
+    position: relative;
+    height: 86%;
+    bottom: 28.3%;
+    width: 3em;
+    left: 22.7%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+}
+
 
