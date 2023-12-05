@@ -19,7 +19,6 @@ body{
 main{
     display: inline-block;
     position: relative;
-
     margin-top: 2%;
     padding: 15;
 }
@@ -29,12 +28,14 @@ main{
     max-width: 500px;
     border-radius: 3%;
 }
+
 .pokemon-imagem{
    position: absolute; 
    bottom: 45%;
    left: 39%;
    width: 25%;
 }
+
 form{
     position: absolute;
     bottom: 4.5%;
@@ -48,7 +49,6 @@ form{
     background-color: transparent;
     font-size: large;
     text-align: center;
-
 }
 
 .buttons {
@@ -66,12 +66,11 @@ form{
     
     background-color: transparent;
 }
+
 .btn-next{
-    
     width: 40px;
     height: 25px;
     right: 60px;
-
     background-color: transparent;
 }
 
@@ -80,6 +79,5 @@ form{
     bottom: 21%;
     left: 10%;
     font-size: 150%;
-    
 }
 
