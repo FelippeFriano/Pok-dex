@@ -1,11 +1,8 @@
 const pokemonNome = document.querySelector('.pokemonNome')
 const pokemonNumero = document.querySelector('.pokemonNumero')
-const pokemonTipo = document.querySelector('.pokemonTipo')
+let pokemonTipo = document.querySelector('.pokemonTipo')
 const pokemonImagem = document.querySelector('.pokemon-imagem')
-const form = document.querySelector('.form')
 const input = document.querySelector('.search')
-const botaoVoltar = document.querySelector('.btn-prev')
-const botaoPassar = document.querySelector('.btn-next')
 
 let PesquisarPokemon = 1;
 
@@ -23,28 +20,33 @@ const renderPokemon = async (pokemon) => {
 
     pokemonNome.innerHTML = dados.name
     pokemonNumero.innerHTML = dados.id
-    pokemonImagem.src = dados['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
+    pokemonImagem.src = dados['sprites']['other']['official-artwork']['front_default']
     pokemonTipo = dados['types']['0']['type']['name']
 
   
 }
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+function formSearch() {
+    addEventListener('submit', (event) => {
+        event.preventDefault();
+    });
     
-    renderPokemon(input.value.toLowerCase());
-});
+    if  (isNaN(input.value)) {
+        renderPokemon(PesquisarPokemon.toLowerCase());
+    } else{
+        PesquisarPokemon = input.value;
+        renderPokemon(PesquisarPokemon);
+    }
+};
 
-botaoVoltar.addEventListener('click', () => {
+function btnPrev()  {
     PesquisarPokemon -= 1;
     renderPokemon(PesquisarPokemon);
-    
-});
-botaoPassar.addEventListener('click', () => {
+};
+
+function btnNext() {
     PesquisarPokemon += 1;
     renderPokemon(PesquisarPokemon);
-    
-    
-});
+};
 
 renderPokemon(PesquisarPokemon);
