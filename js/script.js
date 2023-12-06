@@ -21,7 +21,7 @@ const renderPokemon = async (pokemon) => {
     pokemonNome.innerHTML = dados.name
     pokemonNumero.innerHTML = dados.id
     pokemonImagem.src = dados['sprites']['other']['official-artwork']['front_default']
-    pokemonTipo = dados['types']['0']['type']['name']
+    pokemonTipo.innerHTML = dados['types']['0']['type']['name']
 
   
 }
