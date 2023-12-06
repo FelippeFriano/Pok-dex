@@ -81,3 +81,30 @@ form{
     font-size: 150%;
 }
 
+.pokemonTipo{
+    position: absolute;
+    left: 330px;
+    top: -13%;
+}
+.botaoenviar{
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    border-radius: 100%;
+    left: 260px;
+    top: 40px;
+    background-color: transparent;
+    border-color: transparent;
+    
+
+}
+
+.botaoenviar img{
+    position: absolute;
+    width: 60px;
+    bottom: -5px;
+    right: -5px;
+    
+
+
+}
