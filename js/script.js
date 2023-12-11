@@ -1,8 +1,8 @@
-const pokemonNome = document.querySelector('.pokemonNome')
-const pokemonNumero = document.querySelector('.pokemonNumero')
+let pokemonNome = document.querySelector('.pokemonNome')
+let pokemonNumero = document.querySelector('.pokemonNumero')
 let pokemonTipo = document.querySelector('.pokemonTipo')
-const pokemonImagem = document.querySelector('.pokemon-imagem')
-const input = document.querySelector('.search')
+let pokemonImagem = document.querySelector('.pokemon-imagem')
+let input = document.querySelector('.search')
 
 let PesquisarPokemon = 1;
 
@@ -32,7 +32,9 @@ function formSearch() {
     });
     
     if  (isNaN(input.value)) {
-        renderPokemon(PesquisarPokemon.toLowerCase());
+        
+        renderPokemon(input.value.toLowerCase());
+        
     } else{
         PesquisarPokemon = input.value;
         renderPokemon(PesquisarPokemon);
@@ -40,11 +42,13 @@ function formSearch() {
 };
 
 function btnPrev()  {
+    PesquisarPokemon = parseInt(pokemonNumero.innerHTML);
     PesquisarPokemon -= 1;
     renderPokemon(PesquisarPokemon);
 };
 
 function btnNext() {
+    PesquisarPokemon = parseInt(pokemonNumero.innerHTML);
     PesquisarPokemon += 1;
     renderPokemon(PesquisarPokemon);
 };
